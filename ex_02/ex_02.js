@@ -1,12 +1,10 @@
-function addCar(agentString, car) {
-    let agent = JSON.parse(agentString);
-      agent.car = car;
-    
-  return agent;
-}
+const agentString = '{"age": 57, "code": "007", "prenom": "James", "nom": "Bond"}';
+const updatedAgent = addCar(agentString, 'Aston Martin');
 
-let agentString = '{"name": "James Bond", "age": 57}';
-let car = "Ferrari";
-let updatedAgent = addCar(agentString, car);
+function addCar(agentString, car) {
+    const agent = JSON.parse(agentString);
+    agent.car = car;
+    return agent;
+}
 
 console.log(updatedAgent);
